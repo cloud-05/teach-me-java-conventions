@@ -1,11 +1,19 @@
 package powerpackage;
 
-public class powerfinder {
-    public static int OF(int xyz, int pqr) {
-        int p = 1;
-        for (int i = 0; i<pqr; i++) {
-            p *= xyz;
+public class PowerFinder {
+    // Method to calculate power
+    public static int calculatePower(int base, int exponent) {
+        int result = 1;
+        
+        // Handle exponent 0 case
+        if (exponent == 0) {
+            return 1;
         }
-        return p;
+
+        // Loop for multiplication
+        for (int i = 0; i < exponent; i++) {
+            result *= base;
+        }
+        return result;
     }
 }
